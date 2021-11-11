@@ -9,6 +9,7 @@ import CustomHeaderRight from './components/CustomHeaderRight';
 import defaultSettings from './defaultSettings';
 import Logo from './components/Logo';
 import { validateMessages } from './validateMessages';
+import picEmpty from '../../assets/pic_empty.png';
 
 export default function BasicLayout(props: IRouteComponentProps) {
   const [collapsed, handleMenuCollapse] = useState<boolean>(false);
@@ -33,9 +34,7 @@ export default function BasicLayout(props: IRouteComponentProps) {
     >
       <ConfigProvider
         locale={zhCN}
-        renderEmpty={() => (
-          <Empty image={require('../../assets/pic_empty.png')} description="暂无数据" />
-        )}
+        renderEmpty={() => <Empty image={picEmpty} description="暂无数据" />}
         form={{ validateMessages }}
       >
         <ProLayout

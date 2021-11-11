@@ -1,13 +1,5 @@
-/*
- * @文件描述:
- * @公司: thundersdata
- * @作者: 陈杰
- * @Date: 2020-04-26 10:26:49
- * @LastEditors: 陈杰
- * @LastEditTime: 2020-05-18 19:59:12
- */
 import { defineConfig } from 'umi';
-import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';
+// import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';
 import routeConfig from './routeConfig';
 
 export default defineConfig({
@@ -18,6 +10,7 @@ export default defineConfig({
   outputPath: 'build',
   routes: routeConfig,
   esbuild: {},
+  mfsu: {},
   metas: [
     { name: 'msapplication-TileColor', content: '#da532c' },
     { name: 'theme-color', content: '#ffffff' },
@@ -48,6 +41,10 @@ export default defineConfig({
     },
   ],
   chainWebpack(config) {
-    config.plugin('dayjs').use(AntdDayjsWebpackPlugin);
+    // config.plugin('dayjs').use(AntdDayjsWebpackPlugin);
+    config.module
+      .rule('mjs-rule')
+      .test(/.m?js/)
+      .resolve.set('fullySpecified', false);
   },
 });

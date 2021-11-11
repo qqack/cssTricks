@@ -3,6 +3,9 @@ import { Layout, message } from 'antd';
 import { CopyrightOutlined } from '@ant-design/icons';
 import { IRouteComponentProps } from 'umi';
 import { UseRequestProvider } from 'ahooks';
+import loginLeft from '../../assets/login_left.png';
+import signLogo from '../../assets/signin_logo.png';
+import loginBg from '../../assets/login_bg.png';
 
 const { Header, Content, Footer } = Layout;
 
@@ -22,12 +25,12 @@ export default function SignInLayout(props: IRouteComponentProps) {
     >
       <Layout
         style={{
-          backgroundImage: `url(${require('../../assets/login_bg.png')})`,
+          backgroundImage: `url(${loginBg})`,
         }}
       >
         <Header style={{ height: 100, paddingLeft: 320, paddingRight: 320 }}>
           <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-            <img src={require('../../assets/signin_logo.png')} alt="雷数科技" />
+            <img src={signLogo} alt="雷数科技" />
           </div>
         </Header>
         <Content
@@ -39,7 +42,7 @@ export default function SignInLayout(props: IRouteComponentProps) {
           }}
         >
           <div style={{ flex: 1 }}>
-            <img src={require('../../assets/login_left.png')} alt="" style={{ width: '100%' }} />
+            <img src={loginLeft} alt="" style={{ width: '100%' }} />
           </div>
           <div
             style={{
