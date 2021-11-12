@@ -3,13 +3,13 @@
  * @公司: thundersdata
  * @作者: 陈杰
  * @Date: 2020-04-22 16:17:52
- * @LastEditors: 陈杰
- * @LastEditTime: 2020-05-20 11:26:48
+ * @LastEditors: 仇艳
+ * @LastEditTime: 2021-11-12 09:57:08
  */
 export default [
   {
     path: '/user',
-    component: '@/layouts/SignInLayout',
+    // component: '@/layouts/SignInLayout',
     routes: [
       {
         path: '/user/login',
@@ -25,8 +25,8 @@ export default [
   },
   {
     path: '/',
-    component: '@/layouts/BasicLayout',
-    wrappers: ['@/wrappers/auth', '@/wrappers/guard'],
+    // component: '@/layouts/BasicLayout',
+    // wrappers: ['@/wrappers/auth', '@/wrappers/guard'],
     routes: [
       {
         path: '/homepage',
