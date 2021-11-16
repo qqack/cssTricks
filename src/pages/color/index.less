@@ -1,9 +1,17 @@
-.currentColor {
+.currentColor, .inheritColor {
   width: 100px;
   height: 100px;
   color: red;
-  border: 1px solid currentColor;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.currentColor {
+  border: 1px solid currentColor;
+}
+
+.inheritColor {
+  color: gold;
+  border-color: inherit;
 }
