@@ -4,7 +4,7 @@
  * @作者: 陈杰
  * @Date: 2020-04-22 16:17:52
  * @LastEditors: 仇艳
- * @LastEditTime: 2021-11-12 09:57:08
+ * @LastEditTime: 2021-11-16 11:16:58
  */
 export default [
   {
@@ -25,8 +25,6 @@ export default [
   },
   {
     path: '/',
-    // component: '@/layouts/BasicLayout',
-    // wrappers: ['@/wrappers/auth', '@/wrappers/guard'],
     routes: [
       {
         path: '/homepage',
@@ -35,6 +33,10 @@ export default [
       {
         path: '/',
         redirect: '/homepage',
+      },
+      {
+        path: '/color',
+        component: './color',
       },
       {
         path: '*',
